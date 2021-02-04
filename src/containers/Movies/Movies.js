@@ -1,6 +1,7 @@
-import axios from 'axios';
+// import axios from 'axios';
 import { useEffect, useState } from 'react';
 import Movie from '../../components/Movie/Movie';
+import axios from '../../axios';
 
 const Movies = (props) =>
 {
@@ -10,7 +11,7 @@ const Movies = (props) =>
     });
 
     useEffect(() => {
-        axios.get('https://swapi.dev/api/films')
+        axios.get('/films')
         .then(response => {
             let moviesInfo = response.data.results;
             moviesInfo = moviesInfo.map(movie => ( { 

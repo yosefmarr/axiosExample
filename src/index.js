@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import axios from 'axios';
+
+// configuracion global axios
+axios.defaults.baseURL = 'https://swapi.dev/api';
+
+// axios.defaults.headers.common['Authorization'] = 'sdfdsadfasdf';
 
 ReactDOM.render(
   <React.StrictMode>
